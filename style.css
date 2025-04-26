@@ -15,13 +15,16 @@
     --bg1-color: #fcfcfc;
     --bg2-color: #d6e7e6;
     --border-color: #d2ff8a;
-    --border1-color: #e7f0ef;
+    --border1-color: #0b5048;
     --border2-color: #bdc7c6;
 }
 /* classes all */
 .container {
     padding-left: 200px;
     padding-right: 200px;
+}
+.active {
+    display: block;
 }
 ul {
     list-style: none;
@@ -81,6 +84,13 @@ h2 {
     gap: 10px;
 
 }
+.header-container .heading .spn {
+    display: none;
+}
+.header-container .heading .spn i {
+    opacity: 0;
+    font-size: 50px;
+}
 .header .container .heading img {
     width: 60px;
     display: block;  
@@ -90,18 +100,18 @@ h2 {
     font-size: 30px;
     font-weight: 700;
 }
-.header .container .list-heading .ul {
+.header .container .nav .ul {
     display: flex;
     align-items: center;
     gap: 15px;
 }
-.header .container .list-heading .ul li a {
+.header .container .nav .ul li a {
     font-size: 18px;
     color: var(--black-color);
     cursor: pointer;
     transition: all 0.05s ease;
 }
-.header .container .list-heading .ul li a:hover {
+.header .container .nav .ul li a:hover {
     border-bottom: solid 2px var(--border-color);
     color: var(--secondary-color);
 }
@@ -408,4 +418,133 @@ h2 {
     text-align: center;
     padding: 20px 0;
     color: var(--white-color);
+}
+/* medai quiry  1024*/
+@media (max-width: 1024px) {
+    .container {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+    .home {
+        min-height: 0;
+        padding-bottom: 5%;
+        background-color: var(--bg2-color);  
+    }  
+    .footer .container {
+        padding: 50px 100px;
+    } 
+}
+/* medai quiry  912*/
+@media (max-width: 912px) {
+    .container {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+    .home {
+        min-height: 0;
+        padding-bottom: 5%;
+        background-color: var(--bg2-color);
+    }
+    .home .home-container {
+        display: flex;
+        align-items: center;
+        gap: 0px;
+        padding-top: 15%;
+    }
+    .contact .contact-container .rows .map iframe {
+        height: 100%;
+        width: 100%;
+    }
+    .footer .container .footer-text .icon {
+        display: flex;
+        flex-direction: column;
+        gap: 15px 0;
+        position: relative;
+        top: 5%;
+        right: -60%;
+        width: 200%;  
+    }
+}
+/* medai quiry  768*/
+@media (max-width: 768px) {
+    .header-container {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+    .header-container .heading .spn {
+        position: absolute;
+        display: block;
+        width: 50px;
+        height: 50px;
+        top: 12px;
+        right: 100px;
+        font-size: 50px;
+    }
+    .header-container .heading .spn i {
+        position: absolute;
+        margin: auto;
+        inset: 0;
+        width: max-content;
+        height: max-content;
+        font-size: 45px;
+    }
+    .header-container .heading .spn i.active {
+        opacity: 1;
+    }
+    .header .container .nav {
+        opacity: 0;
+    }
+    .header .container .nav.active {
+        opacity: 1;
+    }
+    .header .container .nav .ul {
+        position: absolute;
+        display: block;
+        background-color: transparent;
+        top: 75px;
+        right: 0;
+        width: 100%;
+        padding: 20px 60-2px;
+        border-radius: 0 0 10px 10px;
+    }
+    .header .container .nav .ul li {
+        margin-bottom: 15px;
+    }
+    .header .container .nav .ul li a {
+        color: var(--black-color);
+        border-bottom: solid 1px var(--primary-color); 
+        padding-bottom: 6px; 
+        font-size: 24px; 
+    }
+    .home .home-container {
+        display: grid;
+        text-align: center;
+        gap: 40px 0;
+        width: 80%;
+        margin-inline: auto;
+    }
+    .home .home-img img {
+        width: 350px;
+        display: block;
+        margin-inline: auto;
+    }
+    .about .about-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 40px 0;
+    }
+    .about .about-container .about-image img {
+        width: 400px;
+        display: block;
+        margin-inline: auto;
+    }
+    .menu .menu-container .boxes {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 25px 0;
+    }
+
 }
