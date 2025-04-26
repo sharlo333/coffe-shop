@@ -507,7 +507,7 @@ h2 {
         top: 75px;
         right: 0;
         width: 100%;
-        padding: 20px 60-2px;
+        padding: 20px 60px;
         border-radius: 0 0 10px 10px;
     }
     .header .container .nav .ul li {
@@ -547,4 +547,90 @@ h2 {
         gap: 25px 0;
     }
 
+}
+@media (max-width: 430px) {
+    .home {
+        width: 100%;
+        padding-top: 50px;
+    }
+    .home .home-text h1 {
+        font-size: 24px;
+    }
+    .home .home-text p {
+        font-size: 14px;
+    }
+    .home .bg-home img {
+        display: block;
+        width: 100%;
+        padding-top: 20%;
+        height: 60vh;
+    }
+    .home .home-container .home-img img {
+        width: 250px;
+    }
+    /* about */
+    .about {
+        width: 100%;
+    }
+    .about .about-container .about-image img {
+        width: 250px;
+    }
+    /* menu */
+    .menu {
+        width: 100%;
+    }
+    .menu .menu-container .boxes .box .text-box p {
+        display: none;
+    }
+    .menu .menu-container .boxes .box .text-box h2 {
+        margin-bottom: 13px;
+        font-size: 18px;
+        width: 125px;
+    }
+    /* testimonials */
+    .testimonials {
+        width: 100%;
+    }
+    .testimonials .testimonials-container .boxes {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 40px 0;
+    }
+    /* contact */
+    .contact {
+        width: 100%;
+    }
+    .contact .contact-container .rows {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 40px 0;
+    }
+    .contact .contact-container .book-form {
+        background-color: transparent;
+    }
+    .contact .contact-container .book-form form input, textarea {
+        width: 100%;
+    }
+    /* feedback form */
+    .feedback-form {
+        width: 100%;
+    }
+    /* footer */
+    .footer {
+        width: 100%;
+    }
+    .footer .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px 0;
+    }
+    .footer .container .footer-text .icon {
+        display: flex;
+        flex-direction: column;
+        gap: 15px 0;
+        position: inherit;
+        top: 5%;
+        right: -60%;
+        width: 200%;  
+    }
 }
